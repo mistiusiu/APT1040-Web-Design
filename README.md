@@ -54,6 +54,12 @@ sudo apt install python3-dev default-libmysqlclient-dev build-essential pkg-conf
 sudo pip install mysqlclient
 ```
 
+To run the console with the database engine run: 
+
+```bash
+<user_variable>=<user_name> <user_password_variable>=<user_password> <user_host_variable>=<user_host> <database_variable>=<database> <storage_type_variable>=db ./console.py
+```
+
 ### JSON
 For debugging reasons I created a script that stored data in a .json file. However, I intentionally have not included the file in order to minimise the probability of someone taking the easy way out and setting the precedent of building a website with a file storage engine because it has the following core issues:
 
@@ -94,6 +100,12 @@ The JS uses an observer to check whether an object is in the view port or not. I
 
 ## API
 The Apllication Programming Interface uses the Flask CORS functionality to use the abstraction offered the Python ORM to query the database and yield a .json file with all the content needed.
+
+To start the API run:
+
+```bash
+<api_host_variable>=<api_host> <api_port_variable>=<api_port> python3 -m api.v1.app
+```
 
 
 ## Web Framework
