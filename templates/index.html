@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Fundamentals</title>
+    <link rel="stylesheet" href="static/styles/styling.css?{{ cache_id }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="static/scripts/app.js?{{ cache_id }}"></script>
+</head>
+<body>
+    <header>
+        <img src="https://www.usiu.ac.ke/assets/image/usiu-logo.png" alt="USIU Logo">
+    </header>
+    <div class="grid-container raleway-common">
+      {% for place in places %}
+      <div class="grid-item">
+          <img src={{ place.picture }}>
+          <h2>{{ place.title }}</h2>
+          <p>{{ place.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+</body>
+</html>
