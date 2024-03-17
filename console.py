@@ -13,7 +13,7 @@ classes = {"BaseModel": BaseModel, "Place": Place}
 
 class HBNBCommand(cmd.Cmd):
     """ HBNH console """
-    prompt = '(demistify) '
+    prompt = '(usiu-a) '
 
     def do_EOF(self, arg):
         """Exits console"""
